@@ -32,4 +32,8 @@ public enum GamePiece
 		else 
 			return a;
 	}
+	public String toString()
+	{
+		return String.format( "%s: a %s %s with priority %d",name(),appearance.getColor(),appearance.getShape(),priority );
+	}
 }
