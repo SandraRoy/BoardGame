@@ -1,9 +1,9 @@
 
 public enum GamePiece 
 {
-	RED_RACECAR(new GamePieceAppearance(Color.RED,Shape.RACECAR),0),
-	BLUE_RACECAR(new GamePieceAppearance(Color.BLUE,Shape.RACECAR),2),
-	MAGENTA_RACECAR(new GamePieceAppearance(Color.MAGENTA,Shape.RACECAR),1),
+	RED_RACER(new GamePieceAppearance(Color.RED,Shape.RACECAR),0),
+	BLUE_RACER(new GamePieceAppearance(Color.BLUE,Shape.RACECAR),2),
+	MAGENTA_RACER(new GamePieceAppearance(Color.MAGENTA,Shape.RACECAR),1),
 	RED_THIMBLE(new GamePieceAppearance(Color.RED,Shape.THIMBLE),10),
 	BLUE_BOOT(new GamePieceAppearance(Color.BLUE,Shape.BOOT),5),
 	GREEN_BOOT(new GamePieceAppearance(Color.GREEN,Shape.BOOT),8),
@@ -25,12 +25,17 @@ public enum GamePiece
 	{
 		return appearance.getShape();
 	}
-	public GamePiece movesFirst(GamePiece a, GamePiece b)
+	 
+	public static GamePiece movesFirst(GamePiece a, GamePiece b)
 	{
 		if(a.priority>b.priority)
+		{
 			return b;
+		}
 		else 
+		{
 			return a;
+		}
 	}
 	public String toString()
 	{
